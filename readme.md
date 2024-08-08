@@ -45,16 +45,8 @@ Before you start, make sure you have the following installed:
    git clone <repository-url>
    cd <project-directory>
    ```
-
-2. **Install Dependencies**
-
-   Make sure you have all necessary dependencies installed by running:
-
-   ```bash
-   npm install
-   ```
-
-3. **Configure Environment Variables**
+ 
+2. **Configure Environment Variables**
 
    Create a `.env` file in the root directory and add your database configuration:
 
@@ -62,7 +54,7 @@ Before you start, make sure you have the following installed:
    DATABASE_URL=postgresql://user:password@localhost:5432/email_automation
    ```
 
-4. **Run `validate_els_work.sh` Script**
+3. **Run `validate_els_work.sh` Script**
 
    This script performs initial validations and setup checks. Ensure you run this script before starting the project.
 
@@ -76,6 +68,8 @@ Before you start, make sure you have the following installed:
 
 
  
+## Approach to the task
+Flows shoud be seen as chains of actions and this actions can be anything from sending emails, delaying, making logs, sending push notification, launching nuclear warheads, but we are just using email and delay, fr the email service that is already provided, for delay i could use timeout to perform delays but i opted for bullmq queeing service, and implmented a simple postgres Db architecture to save flows and know which actions come after the other. 
 
 
 ## API Endpoints
