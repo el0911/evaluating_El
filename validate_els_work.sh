@@ -16,7 +16,7 @@ check_dependencies() {
 # Function to run Docker Compose
 run_docker_compose() {
   echo "Starting Docker containers with 'docker-compose up'..."
-  docker-compose up -d
+  docker-compose up 
 }
 
 # Function to ensure wait-for-it.sh is executable
