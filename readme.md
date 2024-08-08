@@ -71,6 +71,8 @@ Before you start, make sure you have the following installed:
 ## Approach to the task
 Flows shoud be seen as chains of actions and this actions can be anything from sending emails, delaying, making logs, sending push notification, launching nuclear warheads, but we are just using email and delay, fr the email service that is already provided, for delay i could use timeout to perform delays but i opted for bullmq queeing service, and implmented a simple postgres Db architecture to save flows and know which actions come after the other. 
 
+Actions should be incharge of calling thee next actions so the flow is handled recursively which lets us have btter handling of possible errors.
+
 
 ## API Endpoints
 
