@@ -1,0 +1,39 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+model Flow {
+  id           Int      @id @default(autoincrement())
+  triggerEvent String
+  actions      Action[] @relation(onDelete: Cascade) // Cascade delete
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Action {
+  id           Int      @id @default(autoincrement())
+  type         String
+  emailSubject String?
+  emailBody    String?
+  delayMinutes Int?
+  order        Int
+  flow         Flow     @relation(fields: [flowId], references: [id], onDelete: Cascade) // Cascade delete
+  flowId       Int
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model FailedFlow {
+  id        Int      @id @default(autoincrement())
+  flowId    Int
+  actionId  Int
+  userEmail String
+  error     String
+  createdAt DateTime @default(now())
+}
