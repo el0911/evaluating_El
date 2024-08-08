@@ -78,7 +78,7 @@ Actions should be incharge of calling thee next actions so the flow is handled r
 
 ### Create Flow
 
-- **Endpoint:** `POST /flows`
+- **Endpoint:** `POST /api/flows`
 - **Description:** Creates a new flow with specified actions.
 - **Request Body:**
 
@@ -155,7 +155,7 @@ Actions should be incharge of calling thee next actions so the flow is handled r
 
 ### Get Flow
 
-- **Endpoint:** `GET /flows/:id`
+- **Endpoint:** `GET /api/flows/:id`
 - **Description:** Retrieves a flow by its ID.
 - **Response:**
 
@@ -188,7 +188,7 @@ Actions should be incharge of calling thee next actions so the flow is handled r
 
 ### Edit Flow
 
-- **Endpoint:** `PUT /flows/:id`
+- **Endpoint:** `PUT /api/flows/:id`
 - **Description:** Updates an existing flow.
 - **Request Body:**
 
@@ -245,7 +245,7 @@ Actions should be incharge of calling thee next actions so the flow is handled r
 
 ### Delete Flow
 
-- **Endpoint:** `DELETE /flows/:id`
+- **Endpoint:** `DELETE /api/flows/:id`
 - **Description:** Deletes a flow by its ID.
 - **Response:**
 
