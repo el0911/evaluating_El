@@ -16,6 +16,7 @@ This project provides a system for managing and executing flows based on specifi
 - [API Endpoints](#api-endpoints)
   - [Create Flow](#create-flow)
   - [Get Flow](#get-flow)
+  - [Create Evemt](#create-event)
   - [Edit Flow](#edit-flow)
   - [Delete Flow](#delete-flow)
 - [Error Handling](#error-handling)
@@ -131,6 +132,25 @@ Before you start, make sure you have the following installed:
     "createdAt": "2024-08-07T12:00:00.000Z",
     "updatedAt": "2024-08-07T12:00:00.000Z"
   }
+  ```
+
+- **Endpoint:** `POST /api/event`
+- **Description:** Creates a new event wiith a flow.
+- **Request Body:**
+
+  ```json
+    {
+        "eventName": "user_signup",
+        "userEmail": "pete@healthtech1.uk"
+    }
+  ```
+
+- **Response:**
+
+  ```json
+        {
+            "message": "Flow execution queued"
+        }
   ```
 
 ### Get Flow
