@@ -30,9 +30,12 @@ Before you start, make sure you have the following installed:
 
 - **Node.js**: Required for running the application server.
 - **npm**: Node.js package manager.
-- **Docker**: For containerization and running PostgreSQL.
+
 - **PostgreSQL**: Database system used by the application.
 - **Prisma**: ORM for interacting with the PostgreSQL database.
+### Scrap the last 2 i dockerized it 
+- **Docker**: For containerization and running PostgreSQL.
+
 
 ## Project Setup
 
