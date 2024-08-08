@@ -270,6 +270,8 @@ Before you start, make sure you have the following installed:
 - **Usage:**
 
   ```bash
+  chmod +x validate_els_work.sh
+
   ./validate_els_work.sh
   ```
 
