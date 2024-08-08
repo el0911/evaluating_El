@@ -16,7 +16,7 @@ This project provides a system for managing and executing flows based on specifi
 - [API Endpoints](#api-endpoints)
   - [Create Flow](#create-flow)
   - [Get Flow](#get-flow)
-  - [Create Evemt](#create-event)
+  - [Create Event](#create-event)
   - [Edit Flow](#edit-flow)
   - [Delete Flow](#delete-flow)
 - [Error Handling](#error-handling)
@@ -133,6 +133,7 @@ Before you start, make sure you have the following installed:
     "updatedAt": "2024-08-07T12:00:00.000Z"
   }
   ```
+### Create Event
 
 - **Endpoint:** `POST /api/event`
 - **Description:** Creates a new event wiith a flow.
